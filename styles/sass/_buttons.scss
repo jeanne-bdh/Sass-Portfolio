@@ -3,18 +3,15 @@
 }
 
 @function getFontColor($bgColor) {
-    @if(lightness($bgColor) > 50%) {
+    @if lightness($bgColor) > 50% {
         @return $dark;
-    }
-
-    else {
+    } @else {
         @return $white;
     }
 }
 
 .btn {
     padding: 15px 30px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
@@ -25,18 +22,18 @@
     &:hover {
         transform: translateY(-10px);
     }
+}
 
-    @each $name, $color in $colors {
-        &.btn-#{$name} {
-            background-color: $color;
-            border-color: darkenBorder($color);
-            color: getFontColor($color);
+@each $name, $color in $colors {
+    &.btn-#{$name} {
+        background-color: $color;
+        border-color: darkenBorder($color);
+        color: getFontColor($color);
 
-            &:hover {
-                $bg-hover: lighten($color, 10%);
-                background-color: $bg-hover;
-                color: getFontColor($bg-hover);
-            }
+        &:hover {
+            $bg-hover: lighten($color, 10%);
+            background-color: $bg-hover;
+            color: getFontColor($bg-hover);
         }
     }
 }
