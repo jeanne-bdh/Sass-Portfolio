@@ -11,10 +11,12 @@
 }
 
 .btn {
-    padding: 15px 30px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+    }
     font-weight: bold;
     border: solid 1px;
     transition: all ease 0.3s;

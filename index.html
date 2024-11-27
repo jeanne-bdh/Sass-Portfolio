@@ -13,11 +13,27 @@
 <body>
 
     <header class="header-website">
-        HEADER
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">Jeanne BDH</span>
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="menu-toggle" class="menu-input">
+                <label class="btn btn-secondary" for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#competences">Compétences</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="section-display left-text-content">
+        <section class="section-display left-text-content" id="accueil">
             <article class="text-content">
                 <h1 class="title">Jeanne BDH
                     <picture class="emoji-gif">
@@ -47,7 +63,7 @@
                 <img src="img/presentation.png" alt="illustration bureau">
             </div>
         </section>
-        <section class="section-display right-text-content">
+        <section class="section-display right-text-content" id="competences">
             <article class="text-content">
                 <h2 class="title">Mes compétences</h2>
                 <p class="paragraph">Voici les compétences que je maîtrise :</p>

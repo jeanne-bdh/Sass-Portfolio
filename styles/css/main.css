@@ -2,14 +2,25 @@ body {
   font: 19px/23px Montserrat, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #171c28;
   color: #ffffff;
-  margin: 0 30px;
+  margin: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 30px;
+  }
 }
 
-main {
-  margin: 0 30px;
+@media screen and (min-width: 768px) {
+  main {
+    margin: 0 30px;
+  }
 }
 
 header.header-website {
@@ -88,13 +99,17 @@ picture.emoji-gif img {
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
   font-weight: bold;
   border: solid 1px;
   transition: all ease 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 18px;
+  }
 }
 .btn:hover {
   transform: translateY(-10px);
@@ -206,4 +221,30 @@ picture.emoji-gif img {
   100% {
     transform: translate(1500px, -1500px);
   }
+}
+.header-website .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+}
+.header-website .navbar .menu .menu-input:checked ~ .nav-links {
+  display: block;
+}
+.header-website .navbar .nav-links {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: red;
+}
+.header-website .navbar .nav-links .nav-link {
+  display: block;
+  padding: 10px;
+}
+.header-website .navbar .nav-links .nav-link a {
+  color: #ffffff;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
